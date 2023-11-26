@@ -1,5 +1,16 @@
 const extendHex = (shortHex) => {
   // write your code here
+	// Remove the # prefix if present
+  shortHex = shortHex.replace("#", "");
+
+  // Expand shortHex to full hex format
+  const fullHex = shortHex
+    .split('')
+    .map(char => char.repeat(2))
+    .join('');
+
+  // Add the # prefix and return
+  return "#" + fullHex;
 };
 
 // Do not change the code below.
